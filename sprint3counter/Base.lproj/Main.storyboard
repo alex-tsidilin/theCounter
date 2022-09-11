@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +11,63 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="sprint3counter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AW4-wu-inL">
+                                <rect key="frame" x="108" y="677" width="199" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="RUq-PK-F2T"/>
+                                </constraints>
+                                <color key="tintColor" red="0.16221171518031791" green="0.36928323088352072" blue="0.3763310915291912" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Добавить"/>
+                                <connections>
+                                    <action selector="plusOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aKn-Fc-VOe"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Значение счетчика:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QOn-QY-rTW">
+                                <rect key="frame" x="100" y="194" width="214" height="69.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <color key="textColor" red="0.097422169541174344" green="0.22178653057120382" blue="0.22601938067060523" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fiR-5r-jmP">
+                                <rect key="frame" x="0.0" y="404.5" width="414" height="97.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="80"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.02745098248" green="0.11372549830000001" blue="0.20392158630000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <size key="shadowOffset" width="3" height="2"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.34869589580717497" green="0.2061534367159697" blue="0.58432667525773196" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AW4-wu-inL" secondAttribute="trailing" constant="100" id="CH6-7q-cdF"/>
+                            <constraint firstItem="QOn-QY-rTW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="EAB-Zy-sln"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QOn-QY-rTW" secondAttribute="trailing" constant="100" id="GML-5m-uVz"/>
+                            <constraint firstItem="AW4-wu-inL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="GR1-Jr-RYe"/>
+                            <constraint firstItem="fiR-5r-jmP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Os9-pt-XGO"/>
+                            <constraint firstItem="fiR-5r-jmP" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="VcY-M5-0mf"/>
+                            <constraint firstItem="AW4-wu-inL" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="dCF-pF-TZm"/>
+                            <constraint firstItem="QOn-QY-rTW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="dF1-JF-Ed7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fiR-5r-jmP" secondAttribute="trailing" id="ou7-Np-DGv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="AW4-wu-inL" secondAttribute="bottom" constant="100" id="uaH-VR-bF9"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="counterView" destination="fiR-5r-jmP" id="agT-Z6-UrW"/>
+                        <outlet property="mainContainer" destination="8bC-Xf-vdC" id="AMH-oU-hTw"/>
+                        <outlet property="theOnlyButton" destination="AW4-wu-inL" id="KzS-Xi-O1h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="83.705357142857139"/>
         </scene>
     </scenes>
 </document>
