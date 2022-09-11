@@ -9,9 +9,9 @@ import UIKit
 
 //Делаю градиентный бэкграунд
 extension UIView {
-    func applyGradient(colours: [UIColor]) -> CAGradientLayer {
-        return self.applyGradient(colours: colours, locations: nil)
-    }
+//    func applyGradient(colours: [UIColor]) -> CAGradientLayer {
+//        return self.applyGradient(colours: colours, locations: nil)
+//    }
     func applyGradient(colours: [UIColor], locations: [NSNumber]?) -> CAGradientLayer {
         let gradient: CAGradientLayer = CAGradientLayer()
         gradient.frame = self.bounds
@@ -31,9 +31,6 @@ class ViewController: UIViewController {
     
     //Переменные
     var counterValue: Int = 0
-    
-    
-
     
     //Что происходит при загрузке приложения
     override func viewDidLoad() {
